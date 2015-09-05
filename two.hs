@@ -124,9 +124,9 @@ max' a b
 
 --pembatas
 
-min' x
-  | x <= 0 = True
-  | otherwise = False
+min' a b
+  | a <= 0 = a
+  | otherwise = a
 
 --pembatas
 
