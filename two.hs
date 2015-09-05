@@ -13,10 +13,11 @@ null' x
 
 --pembatas
 
-take' n (x:y:xs)
+take' n (x:xs)
   | n == 0 = []
-  | n == 1 = [x]
-  | n == 2 = [x,y]
+  | n == 1 + (length' xs) = (x:xs)
+  | n > 0 = [x] ++ take' (n-1) (xs)
+  | otherwise = []
 
 --pembatas
 
