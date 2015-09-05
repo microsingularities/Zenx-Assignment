@@ -21,7 +21,10 @@ take' n (x:xs)
 
 --pembatas
 
-drop' x = x
+drop' n (x:xs)
+  | n == 0 = (x:xs)
+  | n >= 1 + (length' xs) = []
+  | otherwise = drop' (n - 1) xs
 
 --pembatas
 
