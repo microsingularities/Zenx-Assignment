@@ -94,7 +94,8 @@ length' (x:xs) = 1 + (length' xs)
 
 --pembatas
 
-reverse' x = x
+reverse' [] = []
+reverse' (x:xs) = (reverse'(xs)) ++ [x]
 
 --pembatas
 
@@ -150,7 +151,8 @@ sum' x = x
 
 --pembatas
 
-product' x = x
+product' []= 1
+product' (x:xs) = x * (product'(xs))
 
 --pembatas
 
