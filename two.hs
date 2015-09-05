@@ -1,7 +1,7 @@
 -- First Assignment
 -- Reimplement Haskell function
 -- DON'T USE GOOGLE
-module Template where
+module Two where
 
 import Data.List
 
