@@ -94,7 +94,7 @@ length' (x:xs) = 1 + (length' xs)
 
 --pembatas
 
-reverse' [a,b,c] = [c,b,a]
+reverse' x = x
 
 --pembatas
 
