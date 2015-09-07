@@ -92,7 +92,11 @@ elem' n (x:xs)
 
 --pembatas
 
-notElem' x = x
+notElem' n [] = True
+notElem' n (x:xs)
+  | n == x = False
+  | n /= x = notElem' n xs
+  | otherwise = True
 
 --pembatas
 
