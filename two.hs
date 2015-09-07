@@ -13,17 +13,17 @@ null' x
 
 --pembatas
 
+take' n [] = []
 take' n (x:xs)
   | n == 0 = []
-  | n == 1 + (length' xs) = (x:xs)
   | n > 0 = [x] ++ take' (n-1) (xs)
   | otherwise = []
 
 --pembatas-
 
+drop' n [] = []
 drop' n (x:xs)
   | n == 0 = (x:xs)
-  | n >= 1 + (length' xs) = []
   | otherwise = drop' (n - 1) xs
 
 --pembatas
