@@ -118,7 +118,7 @@ last' x = x
 
 --pembatas
 
-tail' x = x
+tail' (x:xs) = xs
 
 --pembatas
 
