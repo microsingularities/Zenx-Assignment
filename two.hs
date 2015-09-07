@@ -100,7 +100,7 @@ notElem' n (x:xs)
 
 --pembatas
 
-head' x = x
+head' (x:xs) = x
 
 --pembatas
 
@@ -177,11 +177,13 @@ words' x = x
 
 --pembatas
 
-lines' x = x
+lines' "" = []
+lines' "x" = ["x"]
 
 --pembatas
 
-unlines' x = x
+unlines' [] = ""
+unlines' ["x"] = "x\n"
 
 --pembatas
 
