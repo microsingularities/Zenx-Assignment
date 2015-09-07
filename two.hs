@@ -154,7 +154,8 @@ zip3' x = x
 
 --pembatas
 
-sum' x = x
+sum' [] = 0
+sum' (x:xs) = sum' xs + x
 
 --pembatas
 
