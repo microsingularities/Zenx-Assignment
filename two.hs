@@ -114,7 +114,8 @@ reverse' (x:xs) = (reverse'(xs)) ++ [x]
 
 --pembatas
 
-last' x = x
+last' [x] = x
+last' (x:xs) = last' xs
 
 --pembatas
 
