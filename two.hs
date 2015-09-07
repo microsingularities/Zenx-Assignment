@@ -134,7 +134,7 @@ max' a b
 --pembatas
 
 min' a b
-  | a <= 0 = a
+  | a <= b = a
   | otherwise = a
 
 --pembatas
