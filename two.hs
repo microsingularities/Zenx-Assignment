@@ -177,13 +177,11 @@ words' x = x
 
 --pembatas
 
-lines' "" = []
-lines' "x" = ["x"]
+lines'= x
 
 --pembatas
 
-unlines' [] = ""
-unlines' ["x"] = "x\n"
+unlines' = x
 
 --pembatas
 
