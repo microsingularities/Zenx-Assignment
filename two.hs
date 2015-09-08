@@ -177,7 +177,8 @@ words' x = x
 
 --pembatas
 
-lines'= x
+lines' "" = []
+lines' a = [a]
 
 --pembatas
 
