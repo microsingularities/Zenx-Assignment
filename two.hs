@@ -182,7 +182,8 @@ lines' a = [a]
 
 --pembatas
 
-unlines' = x
+unlines' [] = ""
+unlines' [a] = a
 
 --pembatas
 
