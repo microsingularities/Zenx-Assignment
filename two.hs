@@ -177,6 +177,7 @@ words' x = x
 
 --pembatas
 
+lines' [] = []
 lines' "" = []
 lines' a = [a]
 
