@@ -152,7 +152,10 @@ intercalate' x = x
 
 --pembatas
 
-and' x = x
+and' [] = True
+and' (x:xs)
+  | x == False = False
+  | otherwise = and' xs
 
 --pembatas
 
