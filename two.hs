@@ -123,7 +123,8 @@ tail' (x:xs) = xs
 
 --pembatas
 
-init' x = x
+init' [a] = []
+init' (x:xs) = x:(init' xs)
 
 --pembatas
 
