@@ -239,7 +239,7 @@ maximum' x = x
 --pembatas
 
 init' [a] = []
-init' (x:xs) = [x] ++ (init' xs)
+init' (x:xs) = x:(init' xs)
 
 --pembatas
 
