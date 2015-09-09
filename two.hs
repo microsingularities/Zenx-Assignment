@@ -174,7 +174,8 @@ product' (x:xs) = x * (product'(xs))
 
 --pembatas
 
-words' x = x
+words' "" = []
+words' ['a'] = ["a"]
 
 --pembatas
 
