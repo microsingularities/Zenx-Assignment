@@ -169,7 +169,10 @@ and' (x:xs)
 
 --pembatas
 
-or' x = x
+or' [] = False
+or' (x:xs)
+  | x == True = True
+  | otherwise = or' xs
 
 --pembatas
 
