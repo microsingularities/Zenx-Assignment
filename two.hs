@@ -41,7 +41,10 @@ map' a (x:xs) = a x : (map' a xs)
 
 --pembatas
 
-filter' x = x
+filter' a [] = []
+filter' a (x:xs)
+  | a x == True = [x] ++ filter' a xs
+  | otherwise = [] ++ filter' a xs
 
 --pembatas
 
