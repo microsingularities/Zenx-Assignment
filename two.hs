@@ -56,7 +56,10 @@ delete' n (x:xs)
 
 --pembatas
 
-deleteAll' x = x
+deleteAll' _ [] = []
+deleteAll' n (x:xs)
+  | n /= x = [x] ++ deleteAll' n xs
+  | n == x = deleteAll' n xs
 
 --pembatas
 
