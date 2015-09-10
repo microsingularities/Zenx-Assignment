@@ -225,7 +225,10 @@ concatMap' x = x
 
 --pembatas
 
-all' x = x
+all' a [] = True
+all' a (x:xs)
+  | a x == False = False
+  | otherwise = all' a xs
 
 --pembatas
 
