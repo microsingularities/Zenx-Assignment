@@ -232,7 +232,10 @@ all' a (x:xs)
 
 --pembatas
 
-any' x = x
+any' a [] = False
+any' a (x:xs)
+  | a x == True = True
+  | otherwise = any' a xs
 
 --pembatas
 
