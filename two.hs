@@ -214,7 +214,10 @@ takeWhile' x = x
 
 --pembatas
 
-dropWhile' x = x
+dropWhile' a [] = []
+dropWhile' a (x:xs)
+    | a x == True = [] ++ dropWhile' a xs
+    | otherwise = [x] ++ dropWhile' a xs
 
 --pembatas
 
