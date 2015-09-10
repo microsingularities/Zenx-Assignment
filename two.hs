@@ -272,7 +272,10 @@ partition' x = x
 
 --pembatas
 
-replicate' x = x
+replicate' 0 _ = []
+replicate' a b
+  | a == 1 = [b]
+  | otherwise = b :replicate' (a-1) b
 
 --pembatas
 -- First Assignment
