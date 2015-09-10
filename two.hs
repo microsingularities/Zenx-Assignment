@@ -36,7 +36,8 @@ snd' (a, b) = b
 
 --pembatas
 
-map' x = x
+map' a [] = []
+map' a (x:xs) = a x : (map' a xs)
 
 --pembatas
 
