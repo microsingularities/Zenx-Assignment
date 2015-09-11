@@ -196,7 +196,12 @@ product' (x:xs) = x * (product'(xs))
 --pembatas
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 words' x = x
+=======
+words' "" = []
+words' ['a'] = ["a"]
+>>>>>>> origin/master
 =======
 words' "" = []
 words' ['a'] = ["a"]
@@ -206,7 +211,12 @@ words' ['a'] = ["a"]
 
 lines' [] = []
 <<<<<<< HEAD
+<<<<<<< HEAD
 lines' "a" = ["a"]
+=======
+lines' "" = []
+lines' a = [a]
+>>>>>>> origin/master
 =======
 lines' "" = []
 lines' a = [a]
@@ -274,6 +284,7 @@ sort' x = x
 --pembatas
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 minimum' [x] = x
 minimum' (x:xs) = min' x (minimum' xs)
 
@@ -282,11 +293,16 @@ minimum' (x:xs) = min' x (minimum' xs)
 maximum' [x] = x
 maximum' (x:xs) = max' x (maximum' xs)
 =======
+=======
+>>>>>>> origin/master
 minimum' x = x
 
 --pembatas
 
 maximum' x = x
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 
 --pembatas
