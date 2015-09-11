@@ -211,7 +211,10 @@ unwords' x = x
 
 --pembatas
 
-takeWhile' x = x
+takeWhile' a [] = []
+takeWhile' a (x:xs)
+  | a x == True = [x] ++ takeWhile' a xs
+  | otherwise = []
 
 --pembatas
 
