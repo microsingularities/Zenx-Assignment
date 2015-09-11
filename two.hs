@@ -254,7 +254,11 @@ insert' x = x
 
 --pembatas
 
-zipWith3' x = x
+zipWith3' a [] [] [] = []
+zipWith3' a (x:xs) [] [] = []
+zipWith3' a [] (x:xs) [] = []
+zipWith3' a [] [] (x:xs) = []
+zipWith3' a (x:xs) (y:ys) (z:zs) = [a x y z] ++ (zipWith3' a xs ys zs)
 
 --pembatas
 
