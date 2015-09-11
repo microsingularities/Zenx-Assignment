@@ -250,9 +250,12 @@ any' a (x:xs)
 
 --pembatas
 
-insert' x = x
+insert' a [] = [a]
+insert' a (x:xs)
+  | a <= x = a:[x] ++ (xs)
+  | otherwise = [x] ++ (insert' a xs)
 
---pembatas
+--pembatass
 
 zipWith3' a [] [] [] = []
 zipWith3' a (x:xs) [] [] = []
