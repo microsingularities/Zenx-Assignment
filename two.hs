@@ -78,7 +78,11 @@ zip' (x:xs) (y:ys) = [(x,y)] ++ zip' xs ys
 
 --pembatas
 
-zipWith' x = x
+
+zipWith' a [] [] = []
+zipWith' a (x:xs) [] = []
+zipWith' a [] (x:xs) = []
+zipWith' a (x:xs) (y:ys) = [a x y] ++ zipWith' a xs ys
 
 --pembatas
 
