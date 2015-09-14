@@ -289,7 +289,9 @@ inits' x = x
 
 --pembatas
 
-tails' x = x
+tails' [] =[[]]
+tails' (x:xs) = (x:xs) : tails' xs
+
 
 --pembatas
 
