@@ -267,7 +267,8 @@ zipWith3' a (x:xs) (y:ys) (z:zs) = [a x y z] ++ (zipWith3' a xs ys zs)
 
 -- 1.b
 
-nub' x = x
+nub' [] = []
+nub' (x:xs) = [x] ++ (nub' (deleteAll' x (x:xs)))
 
 --pembatas
 
