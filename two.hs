@@ -314,8 +314,13 @@ splitAt' x = x
 
 --pembatas
 
-partition' x = x
-
+partition' a [] = ([],[])
+partition' a (x:xs) = (filter' a (x:xs), unfilter' a (x:xs))
+  where unfilter' a [] = []
+        unfilter' a (x:xs)
+          | a x == False = [x] ++ unfilter' a xs
+          | otherwise = [] ++ unfilter' a xs
+          
 --pembatas
 
 replicate' 0 _ = []
