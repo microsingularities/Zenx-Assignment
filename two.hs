@@ -19,7 +19,7 @@ take' n (x:xs)
   | n > 0 = [x] ++ take' (n-1) (xs)
   | otherwise = []
 
---pembatas-
+--pembatas
 
 drop' n [] = []
 drop' n (x:xs)
