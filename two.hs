@@ -86,7 +86,8 @@ zipWith' a (x:xs) (y:ys) = [a x y] ++ zipWith' a xs ys
 
 --pembatas
 
-nth' x = x
+nth' [x] 0 = x
+nth' (x:xs) a = nth' xs (a-1)
 
 --pembatas
 
