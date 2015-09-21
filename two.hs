@@ -288,7 +288,8 @@ maximum' (x:xs) = max' x (maximum' xs)
 
 --pembatas
 
-inits' x = x
+inits' [] = [[]]
+inits' (x:xs) = inits' (init (x:xs)) ++ [(x:xs)]
 
 --pembatas
 
@@ -298,7 +299,9 @@ tails' (x:xs) = (x:xs) : tails' xs
 
 --pembatas
 
-union' x = x
+union' [] [] = []
+union' (x:xs) [] = (x:xs)
+union' [] (x:xs) = (x:xs)
 
 --pembatas
 
@@ -321,7 +324,7 @@ partition' a (x:xs) = (filter' a (x:xs), unfilter' a (x:xs))
         unfilter' a (x:xs)
           | a x == False = [x] ++ unfilter' a xs
           | otherwise = [] ++ unfilter' a xs
-          
+
 --pembatas
 
 replicate' 0 _ = []
