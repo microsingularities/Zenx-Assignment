@@ -64,11 +64,12 @@ deleteAll' n (x:xs)
 --pembatas
 
 foldll' a x [] = x
-foldll' a x (y:ys) = a (foldl' a x ys) y
+foldll' a x (y:ys) = a (foldll' a x ys) y
 
 --pembatas
 
-foldl1' x = x
+foldll1' a [x] = [x]
+foldll1' a (x:xs) = a (x) (foldll1' a xs)
 
 --pembatas
 
