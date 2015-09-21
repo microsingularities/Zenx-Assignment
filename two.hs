@@ -63,7 +63,8 @@ deleteAll' n (x:xs)
 
 --pembatas
 
-foldl' x = x
+foldll' a x [] = x
+foldll' a x (y:ys) = a (foldl' a x ys) y
 
 --pembatas
 
