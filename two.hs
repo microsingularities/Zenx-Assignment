@@ -324,7 +324,7 @@ group' (x:xs) = [[x]] ++ group' xs
 
 --pembatas
 
-splitAt' x = x
+splitAt' a (x:xs) = ((take a (x:xs)),(drop a (x:xs)))
 
 --pembatas
 
