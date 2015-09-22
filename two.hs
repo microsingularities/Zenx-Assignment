@@ -162,7 +162,9 @@ concat' [(x:xs)] = x:xs
 
 --pembatas
 
-intersperse' x = x
+intersperse' a [] = []
+intersperse' a [x] = [x]
+intersperse' a (x:xs) = [x] ++ [a] ++ intersperse' a xs
 
 --pembatas
 
