@@ -275,7 +275,11 @@ nub' (x:xs) = [x] ++ (nub' (deleteAll' x (x:xs)))
 
 --pembatas
 
-sort' x = x
+sort' [] = []
+sort' [x] = [x]
+sort' (x:xs)
+  | x == minimum (x:xs) = [x] ++ sort' xs
+  | otherwise =  sort' (xs ++ [x])
 
 --pembatas
 
