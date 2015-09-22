@@ -301,8 +301,11 @@ tails' (x:xs) = (x:xs) : tails' xs
 --pembatas
 
 union' [] [] = []
-union' (x:xs) [] = (x:xs)
-union' [] (x:xs) = (x:xs)
+union' (y:ys) [] = (y:ys)
+union' [] (y:ys) = (y:ys)
+union' (x:xs) (y:ys)
+  | y == x = [x] ++ union' xs (y:ys)
+  | otherwise = [x] ++ union' xs (y:ys)
 
 --pembatas
 
