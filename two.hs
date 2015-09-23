@@ -69,7 +69,6 @@ foldll' a x (y:ys) = a (foldll' a x ys) y
 --pembatas
 
 foldll1' a [x] = [x]
-foldll1' a (x:xs) = a (x) (foldll1' a xs)
 
 --pembatas
 
@@ -158,7 +157,8 @@ min' a b
 --pembatas
 
 concat' [[]] = []
-concat' [(x:xs)] = x:xs
+concat' [[x]] = [x]
+concat' (x:xs) = x ++ concat' xs
 
 --pembatas
 
@@ -168,7 +168,9 @@ intersperse' a (x:xs) = [x] ++ [a] ++ intersperse' a xs
 
 --pembatas
 
-intercalate' x = x
+intercalate' a [x] = x
+intercalate' a (x:xs) = x ++ a ++ (intercalate' a xs)
+--intercalate' a (x:xs) = concat' (intersperse' a (x:xs))
 
 --pembatas
 
@@ -302,7 +304,6 @@ inits' (x:xs) = inits' (init' (x:xs)) ++ [(x:xs)]
 
 tails' [] =[[]]
 tails' (x:xs) = (x:xs) : tails' xs
-
 
 --pembatas
 
