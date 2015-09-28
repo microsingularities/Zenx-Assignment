@@ -351,7 +351,7 @@ replicate' a b
   | a == 1 = [b]
   | otherwise = b :replicate' (a-1) b
 
---pembatas
+-- pembatas
 -- First Assignment
 -- Reimplement Haskell function
 -- DON'T USE GOOGLE
