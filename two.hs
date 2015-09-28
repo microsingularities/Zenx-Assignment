@@ -319,7 +319,12 @@ union' (x:xs) (y:ys)
 
 --pembatas
 
-intersect' x = x
+intersect' [] [] = []
+intersect' _ [] = []
+intersect' [] _ = []
+intersect' (x:xs) (y:ys)
+  | elem' x (y:ys) == True = [x] ++ intersect' (xs) (y:ys)
+  | otherwise = intersect' (xs) (y:ys)
 
 --pembatas
 
