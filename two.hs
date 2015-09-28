@@ -92,11 +92,14 @@ nth' (x:xs) a = nth' xs (a-1)
 
 --pembatas
 
-scanl' x = x
+scanl'' a b [] = [b]
+scanl'' a b (x:xs) = [b] ++ scanl'' a (a b x) xs
 
 --pembatas
 
-scanl1' x = x
+scanl1'' a [] = []
+scanl1'' a [x] = [x]
+scanl1'' a (x:xs) = [x] ++ (scanl1'' a (a x (head' xs) : (tail' xs)))
 
 --pembatas
 
