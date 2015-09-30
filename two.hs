@@ -210,19 +210,22 @@ product' (x:xs) = x * (product'(xs))
 
 --pembatas
 
-words' [] = []
+words' (x:xs) = []
 
 --pembatas
 
-lines' [] = []
+lines' "" = []
+lines' (x:xs)
+  | x == '\n' = "":[xs]
+  | otherwise = [x:xs]
 
 --pembatas
 
-unlines' [] = []
+unlines' x = x
 
 --pembatas
 
-unwords' [] = []
+unwords' x = x
 
 --pembatas
 
