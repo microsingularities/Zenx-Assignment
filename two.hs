@@ -217,6 +217,7 @@ words' (x:xs) = []
 lines' "" = []
 lines' (x:xs)
   | x == '\n' = "":[xs]
+  | x /= '\n' = [x] ++ lines' xs
   | otherwise = [x:xs]
 
 --pembatas
